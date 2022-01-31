@@ -1,0 +1,246 @@
+/* Global ===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 700px;
+    background: url('https://source.unsplash.com/random?highway?location?road?street?address/1600x900');
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+
+/* Head ===================== */
+
+header {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Content ===================== */
+
+#container {
+    width: min(90vw, 1000px);
+    margin: auto;
+}
+
+
+/* Form ===================== */
+
+#form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-section #form_data {
+    background: white;
+    padding: 1.5rem 3rem;
+    border-radius: .5rem;
+    opacity: .9;
+    transition: opacity .4s;
+}
+
+#form-section #form_data:hover {
+    opacity: 1;
+}
+
+#form_data h1 {
+    text-align: center;
+    padding: 0 0 1.5rem 0;
+}
+
+#form_data .input-group input,
+#form_data .input-group select {
+    width: 25rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px dashed gray;
+    color: rgb(138, 129, 129);
+    font-weight: 600;
+    font-size: 15px;
+    padding-left: 32px;
+    margin: 10px 6px;
+    border-radius: 1.5rem;
+}
+
+#form_data .input-group select {
+    cursor: pointer;
+}
+
+#form_data .input-group input:hover,
+#form_data .input-group select:hover {
+    border-bottom: 2px solid gray;
+    ;
+}
+
+#form_data .input-group input:focus,
+#form_data .input-group select:focus {
+    border-bottom: 2px solid gray;
+}
+
+#form_data button {
+    margin-top: 16px;
+    margin-bottom: 6px;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    outline-style: none;
+    border-radius: .3rem;
+    background: rgb(245, 202, 10);
+    color: rgb(138, 129, 129);
+    font-weight: 600;
+    font-size: 16px;
+    opacity: .8;
+    transition: opacity .3s, color 1s;
+}
+
+#form_data button:hover {
+    opacity: 1;
+    color: rgb(22, 19, 19);
+}
+
+
+/* Ceps ===================== */
+
+#ceps-section {
+    margin-top: 16px;
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0rem 0.5rem;
+    color: #969cb3;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+table tbody tr:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+table tbody tr {
+    opacity: 0.7;
+    transition: opacity .3s, transform .6s;
+}
+
+table thead tr th {
+    background: white;
+    font-weight: 600;
+    text-align: left;
+    padding: 1rem 1rem;
+}
+
+table tbody tr td {
+    background: white;
+    padding: 1rem 1rem;
+    text-align: left;
+    font-size: 1.1rem;
+    transition: color .3s;
+}
+
+table tbody tr td:hover {
+    color: rgb(22, 22, 22);
+    font-weight: 530;
+}
+
+
+/* Footer ============================ */
+
+footer {
+    float: left;
+    position: fixed;
+    top: 10px;
+    /* left: -170px; */
+    text-align: center;
+    padding: 2rem 2rem;
+    color: var(--dark-blue);
+    opacity: 0.15;
+    background: white;
+    border-radius: 0 10px 10px 0;
+    transition: transform .5s, opacity .7s;
+    cursor: pointer;
+}
+
+footer:hover {
+    /* transform: translateX(170px); */
+    opacity: 1;
+}
+
+footer span {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+footer p small {
+    font-weight: 600;
+    margin-left: -40px
+}
+
+footer p {
+    font-weight: 600;
+    color: rgb(70, 67, 67);
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+footer img {
+    width: 30px;
+}
+
+
+/* Responsive ============================ */
+
+@media (max-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+    #form-section {
+        /* display: flex;
+        align-items: center;
+        justify-content: space-between; */
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr;  ou */
+        grid-template-columns: repeat( 1fr);
+        gap: 2rem;
+    }
+}

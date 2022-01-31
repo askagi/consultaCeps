@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>busca CEP</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg">
+
+    <div class="bg">
+        <header>
+            <!-- <h1>Busca CEPs</h1> -->
+        </header>
+
+        <main id="container">
+            <section id="form-section">
+                <form id="form_data" onsubmit="Form.submit(event)">
+                    <h1>Busca CEPs</h1>
+                    <div class="input-group">
+                        <div class="input-group">
+                            <input autocomplete="off" list="states" name="state" id="state" placeholder="UF">
+                        </div>
+                        <span></span>
+                        <datalist id="states"></datalist>
+                    </div>
+
+                    <div class="input-group">
+                        <input autocomplete="off" list="cities" type="text" placeholder="Cidade" id="city" name="city">
+                        <datalist id="cities"></datalist>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" placeholder="Logradouro ou Rua" id="public_place" name="public_place">
+                    </div>
+
+                    <button type="submit">Buscar</button>
+                </form>
+
+            </section>
+
+            <section id="ceps-section">
+
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>CEP</th>
+                            <th>Logradouro</th>
+                            <th>Bairro</th>
+                            <th>Localidade</th>
+                            <th>UF</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <footer>
+            <a href="https://github.com/askagi" target="_blank">
+                <p>by José Costa</p>
+                <img src="./assets/github-brands.svg" alt="logo do github">
+                <p>Github</p>
+            </a>
+        </footer>
+
+
+    </div>
+    <script src="js/viacep.js"></script>
+</body>
+
+</html>
